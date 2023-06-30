@@ -32,7 +32,7 @@ I would like to take you on a journey through the thoughts of younger me, as I l
 
 In GameMaker I tended to call objects “o+name”, so this would be “object Control”. I’m not sure why I did it like that, since people these days typically go “obj_+name”, like “obj_Control”, or something similar. Regardless, this was probably one of the first and most important objects in the entire project. It holds the world editor, renders the backgrounds for each planet, and is in charge of all the important background systems (like playing the music depending on the planet and room) and global variables. It needed really specific features that just didn't fit anywhere else. "I really need a specific detail-system which adds thick letterboxing for ***added intensity*** whenever and wherever I want it during the game…” I would just chuck it somewhere completely wild like the last rendered Event (Draw End), because I "wanted it to always be drawn above everything" - which is totally fair, but it later became a problem when I wanted to draw specific UI text that kept on being drawn over when the letterboxing would happen:
 
-### > letterbox *[oControl/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/3f3baecb4c61134b5207b15a970725f975ce1837/oControl/Draw_73.gml#L38-L48)* _
+### > letterbox *[oControl/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/oControl/Draw_73.gml#L38-L48)* _
 
 ```csharp
 /// It's interesting how I'm using reach() in a way that reach_tween()
@@ -56,7 +56,7 @@ I left the comments in there so you can see some of my thinking. Though I'm not 
 
 It also managed the window and camera/view dimensions and scale:
 
-### > set_game_screen *[scripts/set_game_screen.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/scripts/set_game_screen/set_game_screen.gml#L3-L71)* _
+### > set_game_screen *[scripts/set_game_screen.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/scripts/set_game_screen/set_game_screen.gml#L3-L71)* _
 
 ```csharp
 /// This was called to re-adjust the WASD/Arrows controls
@@ -172,7 +172,7 @@ NYKRA’s iterations always began with an “oPlayer” object, which would cont
 
 The way it drew Keu’s sprites, too, was so strange, and didn’t involve a state-machine at all really. It had a part of one, but I kept on layering up the if()s - which made it a bit of a mess.
 
-### > draw states *[oPlayer/Draw_0.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/oPlayer/Draw_0.gml#L1-L119)* _
+### > draw states *[oPlayer/Draw_0.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/oPlayer/Draw_0.gml#L1-L119)* _
 
 ```csharp
 /// I'm pretty sure I wrote "draw = 0;" as a comment so I could
@@ -352,7 +352,7 @@ EO is the floating companion that you encounter late in the game, and is one of 
 
 EO started off as an over-the-shoulder energy cannon of sorts, but then progressively became more and more “AI-like” with complex movement behaviours involving machine-learning, and a much more elaborate position in the story. I wish I was able to get EO to where I wanted it to go, but it fell short on many aspects. The later idea was that EO would get better and better at defending you, but it was hard to really grasp the scope.
 
-### > pixelate *[oEo/Draw_0.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/oEo/Draw_0.gml#L21-L38)* _
+### > pixelate *[oEo/Draw_0.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/oEo/Draw_0.gml#L21-L38)* _
 
 ```csharp
 /// EO was originally just drawn and rotated sprites, but I remember at
@@ -400,7 +400,7 @@ draw_circle_color(x,(y),2.5+lengthdir_x(0.5,tick*123),merge_colour(c_black,merge
 
 Just like many other major components of NYKRA, the Dialogue system went through huge changes as the game evolved. I couldn’t think of the best parts to point out within the Dialogue rendering system, since it’s a really chunky and complex pile of code. One part near the end of one of the draw events caught my eye though as I was sifting through it all. It involves reading a string of text that was connected to the current dialogue block, which could contain little “commands” to make objects do things. I would use it to change the animation state of an object - like making Keu “think”, or Taff pointing. More is explained below in the code block:
 
-### > command via string *[parDialogue/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/parDialogue/Draw_73.gml#L567-L624)* _
+### > command via string *[parDialogue/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/parDialogue/Draw_73.gml#L567-L624)* _
 
 ```csharp
 /// I was apparently very worried about dlg_t being negative.
@@ -481,7 +481,7 @@ I just made it use an additive blendmode on the black surface, and draw anything
 
 Here’s a section on a few different lights that were drawn to the specific objects:
 
-### > LIGHTING *[LIGHTING/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/LIGHTING/Draw_73.gml#L569-L613)* _
+### > LIGHTING *[LIGHTING/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/LIGHTING/Draw_73.gml#L569-L613)* _
 
 ```csharp
 if instance_number(parGnarcier)>=1 {
@@ -547,7 +547,7 @@ A lot of that rambling above is now me wishing I could have told myself this whe
 
 The code below is where I was trying to figure out a way to have “camera points”, that had a radius which when the player enters will make the camera pan over and look somewhere between the player and the point… depending on how close you are to the point. It’s a little complex, but the effect came out really amazing, and I have so many new ways to go further with this that I’d love to experiment with one day.
 
-### > look at *[oCamera/Step_2.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/oCamera/Step_2.gml#L15-L46)* _
+### > look at *[oCamera/Step_2.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/oCamera/Step_2.gml#L15-L46)* _
 
 ```csharp
 /// The x and y variables are the real position of the middle
@@ -614,7 +614,7 @@ There was a pivotal moment in NYKRA’s history when I realised I wanted to purs
 
 I chose this draw event below in particular because it has some really amusing code in it that I wrote when I was a lot younger:
 
-### > note drawing *[parNote/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/f6922ee24fa33b5d39482c42a72e2c5a52508304/parNote/Draw_73.gml#L2-L48)* _
+### > note drawing *[parNote/Draw_73.gml](https://github.com/ENDESGA/NYKRA_Before/blob/main/parNote/Draw_73.gml#L2-L48)* _
 
 ```csharp
 /// Pretty boring stuff to start...
