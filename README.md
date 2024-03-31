@@ -707,3 +707,27 @@ Awards:
 Evolution of Keu:
 
 [https://twitter.com/ENDESGA/status/867592735145865217?s=20&t=7q9VfLgR5I7uVp6bo7xewg](https://twitter.com/ENDESGA/status/867592735145865217?s=20&t=7q9VfLgR5I7uVp6bo7xewg)
+
+---
+---
+---
+
+# post mortem, ante vitam
+
+It's quite interesting to think back on what I had made. The things I had accomplished.
+Since I released the game it has left a bit of a scar. It never really became what I wanted.
+But the interesting thing about this is that it was mostly due to my lack of skill. It's quite profound how much better of a developer I am, even from writing this older post.
+A few days ago was my birthday, and it feels weird to think it's been more than 7 years since the Kickstarter... Time moves very fast, and it's hard to keep up.
+The past couple years have involved a lot of growth, I've learned a lot, and have a few more mountains I'm still climbing. It's worth it though, the struggle to learn such complex things like Vulkan.
+The future of NYKRA, hence the "ante vitam" part of the title (which means "before life"), is going to involve a much more thoughtful approach.
+I was reading up on Tolkien's life, and I really do love the amount of time and care he put into everything. He finished TLotR books in his late 50s, which makes me feel a lot better haha.
+When I was younger I had this insane rush to make Nykra (lowercase, since I mean the galaxy, not the game), but as I've gotten older I realised I want to pick at it for way longer.
+What if I released the remake when I'm 77 years old? ... I'm kidding. But that'd be amusing.
+I'm 27, and I have a LOT ahead of me. Can't wait for 37-me to read back on this and go "wow, I knew nothing".
+
+I wish I had more to write about, but I really have just taken time over the past couple years to detach from NYKRA (the game this time) so I can assess what would be needed for it.
+Despite that though, I've got a new full-time job. And I need to focus on that to fuel my future endeavours. It's amazing to be with a team again, and I can't wait to make cool things.
+
+Onwards.
+
+-edg
